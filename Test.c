@@ -61,12 +61,8 @@ int intpow(int base, short exp);
 void start(){
     clrscrn();
     char input[256];
-    pchar('?');
     while(1){
-        for(byte i = 0; i < 3;i++){
-            pchar('>');
-        }
-        pchar(' ');
+        pstr(">>> ");
         for(int i = 0; i < 255;i++){
             input[i] = '\0';
         }
@@ -241,9 +237,7 @@ void pint(int num){
 
 //prints a newline
 void newline(void){
-    //pstr("\n\r"); // \n moves it down and \r returns it to the left
-    pchar('\n');
-    pchar('\r');
+    pstr("\n\r"); // \n moves it down and \r returns it to the left
 }
 
 //====================================================
