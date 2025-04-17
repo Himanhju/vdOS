@@ -68,7 +68,6 @@ void start(){
             input[i] = '\0';
         }
         get_str(256, input);
-        pstr(input);
         newline();
         if(strncmp("halt", input, 4) == 0){
             asm("hlt":::);
@@ -89,7 +88,7 @@ void start(){
             }
             newline();
         }else if(strncmp("Ereset", input, 6) == 0){
-            start();
+            start(); // Emergency Reset in case of corrupted input (emergency because its very bad and inefficient)
         }
         newline();
     }
