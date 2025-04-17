@@ -1,7 +1,3 @@
-CC = clang
-AS = nasm
-LINK = ld.ldd
-
 all:
   nasm -f bin bootloader.asm -o asm.bin
   clang -target i386-pc-none-elf -ffreestanding -fno-builtin -fomit-frame-pointer -fno-stack-protector -fno-pic -fno-pie -m16 -mno-red-zone -mno-stackrealign -nostdlib -Wall -Wextra -c kernel.c -o o.o
