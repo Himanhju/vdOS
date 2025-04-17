@@ -1,15 +1,3 @@
-/*
-\n (0x0A): move cursor down one line
-
-\r (0x0D): return to column 0 of current line
-
-\b (0x08): backspace
-
-\f (0x0C): form feed (clears screen on some terminals)
-
-\a (0x07): bell
-*/
-
 //=====================Type Defs=====================
 
 typedef unsigned char      byte;
